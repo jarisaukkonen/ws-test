@@ -1,0 +1,19 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: ws-test
+    app.kubernetes.io/component: ws-test
+    app.kubernetes.io/instance: ws-test
+    app.kubernetes.io/part-of: ws-test-app
+  name: ws-test
+spec:
+  host: {{ .Values.host }}
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: Service
+    name: ws-test
+    weight: 100
+  wildcardPolicy: None
+status: {}

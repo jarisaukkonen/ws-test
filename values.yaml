@@ -1,0 +1,3 @@
+imagestream: default-route-openshift-image-registry.apps.tunk.ocp4.ambientia.fi/ws-jarisaukkonen-prod
+host: ws-test-jarisaukkonen-prod.apps.tunk.ocp4.ambientia.fi
+env: default
